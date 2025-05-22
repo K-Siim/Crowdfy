@@ -6,7 +6,6 @@
                 <button @click="$router.back()" class="text-gray-700 font-medium hover:text-black transition-colors">
                     ← Go back
                 </button>
-                <h2 class="text-2xl font-bold text-gray-800">MAGAZINE</h2>
             </div>
 
             <!-- Title and Preview Text -->
@@ -26,7 +25,6 @@
                     <div class="flex items-center gap-6 text-gray-700">
                         <span><span class="font-bold">Text:</span> {{ article.author }}</span>
                         <span><span class="font-bold">Date:</span> {{ article.date }}</span>
-                        <span><span class="font-bold">Read:</span> {{ article.readTime }}</span>
                     </div>
                     <span class="text-gray-700 text-xs border border-gray-300 rounded-full px-3 py-1">{{ article.tag }}</span>
                 </div>
