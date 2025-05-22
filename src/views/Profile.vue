@@ -8,7 +8,7 @@ import Settings from '@/components/Profile/Settings.vue';
    
   <div>
     <SubNavbarProfile />
-    <!-- <Settings /> -->
+    
     <div class="p-6">
       <router-view />
     </div>
