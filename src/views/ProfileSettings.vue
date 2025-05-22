@@ -5,12 +5,6 @@ import Settings from '@/components/Profile/Settings.vue';
 
 
 <template>
-   
-  <div>
-    <SubNavbarProfile />
-    <!-- <Settings /> -->
-    <div class="p-6">
-      <router-view />
-    </div>
-  </div>
+   <SubNavbarProfile /> 
+   <Settings />
 </template>

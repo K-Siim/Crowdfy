@@ -14,8 +14,8 @@
               <nav class="hidden md:flex space-x-6 text-white font-medium">
                 <RouterLink to="/" class="hover:underline">Home</RouterLink>
                 <RouterLink to="/explore" class="hover:underline">Explore</RouterLink>
-                <RouterLink to="/campaigns" class="hover:underline">Campaigns</RouterLink>
-                <RouterLink to="/profile" class="hover:underline">Profile</RouterLink>
+                <RouterLink to="/campaigns/overview" class="hover:underline">Campaigns</RouterLink>
+                <RouterLink to="/profile/settings" class="hover:underline">Profile</RouterLink>
               </nav>
             </div>
   
