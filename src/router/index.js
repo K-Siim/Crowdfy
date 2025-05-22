@@ -5,6 +5,9 @@ import Campaigns from '../views/Campaigns.vue'
 import Profile from '../views/Profile.vue'
 import ProfileSettings from '@/components/Profile/Settings.vue'
 import ProfileNotifications from '@/components/Profile/ProfileNotifications.vue'
+import ExploreCards from '../components/Explore/ExploreCards.vue'
+import ExploreCardDetail from '../components/Explore/ExploreCardDetail.vue'
+import Explore from '../views/Explore.vue'
 
 // import ProfileFavorites from '@/components/Profile/Favorites.vue'
 // import ProfileHistory from '@/components/Profile/History.vue'
@@ -16,7 +19,10 @@ const routes = [
   // { path: '/explore', name: 'Explore', component: Explore },
   { path: '/campaigns', name: 'Campaigns', component: Campaigns },
   { path: '/profile', name: 'Profile', component: Profile },
+  { path: '/article/:title', name: 'Article', component: ExploreCardDetail },
+  { path: '/explore', name: 'Explore', component: Explore },
 
+  
   {
     path: '/profile',
     component: Profile,
@@ -40,12 +46,10 @@ const routes = [
   }
 ]
 
+
 const router = createRouter({
   history: createWebHistory(),
   routes,
 })
 
-
-
-export default router
 
