@@ -3,7 +3,7 @@
       <!-- Navbar -->
       <header
         class="w-full fixed top-0 left-0 right-0 z-50"
-        :class="isHomePage ? '' : 'bg-pink-500'"
+        :class="isHomePage ? '' : 'bg-white text-gray-900 border-b border-gray-200'"
         :style="isHomePage ? { backgroundImage: 'url(/src/assets/Screenshot-2025-05-07-at-19.58.20.png)' } : {}"
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,7 +11,7 @@
             <!-- Left section -->
             <div class="flex items-center space-x-4">
               <img src="@/assets/Logo.png" alt="Logo" class="h-6" />
-              <nav class="hidden md:flex space-x-6 text-white font-medium">
+              <nav class="hidden md:flex space-x-6 font-medium" :class="isHomePage ? 'text-white' : 'text-gray-900'">
                 <RouterLink to="/" class="hover:underline">Home</RouterLink>
                 <RouterLink to="/explore" class="hover:underline">Explore</RouterLink>
                 <RouterLink to="/campaigns/overview" class="hover:underline">Campaigns</RouterLink>
@@ -26,10 +26,12 @@
                 <input
                   type="text"
                   placeholder="Search"
-                  class="pl-10 pr-4 py-1.5 rounded-md bg-white/20 border border-white text-white placeholder-white text-sm focus:outline-none"
+                  :class="isHomePage ? 'bg-white/20 border-white text-white placeholder-white' : 'bg-gray-100 border-gray-300 text-gray-900 placeholder-gray-500'"
+                  class="pl-10 pr-4 py-1.5 rounded-md border text-sm focus:outline-none"
                 />
                 <svg
-                  class="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white"
+                  class="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4"
+                  :class="isHomePage ? 'text-white' : 'text-gray-900'"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -46,7 +48,8 @@
   
               <!-- Add Button -->
               <button
-                class="w-8 h-8 border border-white rounded-md flex items-center justify-center text-white text-lg"
+                :class="isHomePage ? 'border-white text-white' : 'border-gray-900 text-gray-900'"
+                class="w-8 h-8 border rounded-md flex items-center justify-center text-lg"
               >
                 +
               </button>
@@ -64,11 +67,13 @@
   
               <!-- Settings -->
               <button
-                class="w-8 h-8 border border-white rounded-md flex items-center justify-center"
+                :class="isHomePage ? 'border-white' : 'border-gray-900'"
+                class="w-8 h-8 border rounded-md flex items-center justify-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 text-white"
+                  class="h-5 w-5"
+                  :class="isHomePage ? 'text-white' : 'text-gray-900'"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -83,7 +88,8 @@
             <div class="md:hidden flex items-center">
               <button
                 @click="mobileMenuOpen = !mobileMenuOpen"
-                class="text-white focus:outline-none"
+                :class="isHomePage ? 'text-white' : 'text-gray-900'"
+                class="focus:outline-none"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +112,8 @@
           
           <div
             v-if="mobileMenuOpen"
-            class="md:hidden mt-2 space-y-2 text-white font-medium"
+            class="md:hidden mt-2 space-y-2 font-medium"
+            :class="isHomePage ? 'text-white' : 'text-gray-900'"
           >
             <RouterLink to="/" class="block px-2 py-1 hover:bg-white/10 rounded"
               >Home</RouterLink
